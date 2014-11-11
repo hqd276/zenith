@@ -48,9 +48,12 @@ $route['login'] = "user/login";
 $route['register'] = "user/register";
 $route['logout'] = "user/logout";
 
+$route['aboutus'] = "about";
 $route['contact'] = "contact";
 
 $route['admin'] = "admin";
+$route['list-support'] = "admin/support";
+$route['list-category/(:num)'] = "admin/category/index/$1";
 
 
 /* End of file routes.php */

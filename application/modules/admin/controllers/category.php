@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Admin extends CI_Controller{
+class Category extends CI_Controller{
 	
 	public function __construct(){
 		parent::__construct();
@@ -9,6 +9,9 @@ class Admin extends CI_Controller{
 
 		$user = $this->session->userdata('user'); 
 		if ($user['id']){
+			#Tải model 
+			$this->load->model(array('modelcategory'));
+
 			$this->template->set('user',$user);
 		}else{
 			redirect(base_url('login'));
@@ -17,8 +20,12 @@ class Admin extends CI_Controller{
 		$this->template->set_layout('admin');
 	}
 	
-	public function index(){
+	public function index($type=0){
 		$data = array();
-		$this->template->build('admin',$data);
+
+		$data['list'] = $this->modelcategory->getCategories($type,0,10);
+		// var_dump($data['list']);die;
+
+		$this->template->build('listcategory',$data);
 	}
 }

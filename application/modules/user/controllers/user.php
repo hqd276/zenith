@@ -12,8 +12,11 @@ class User extends CI_controller {
 
 		#Tải model 
 		$this->load->model(array('model'));
+		
+		$data = array();
+		$data['page'] = '';
 
-		$this->template->set_partial('header','header');
+		$this->template->set_partial('header','header',$data);
 		$this->template->set_partial('footer','footer');
 	}
 	

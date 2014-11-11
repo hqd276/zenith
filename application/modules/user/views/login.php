@@ -1,4 +1,5 @@
-<div class="login-form">
+<div class="login-form bg-white">
+	<h2 class="">Login form</h2>
 	<form class="form-horizontal" role="form" method="post" action="<? echo base_url();?>login">
 		<div class="form-group">
 			<div>
@@ -23,7 +24,7 @@
 			  	<label class="control-label" for="inputError1"><?php echo form_error('password'); ?></label>
 			</div>
 		</div>
-		<div class="form-group">
+		<!-- <div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
 			  <div class="checkbox">
 			    <label>
@@ -31,7 +32,7 @@
 			    </label>
 			  </div>
 			</div>
-		</div>
+		</div> -->
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
 			  <button type="submit" class="btn btn-default">Sign in</button>

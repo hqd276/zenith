@@ -7,10 +7,11 @@ body {
 .container {
 	/*max-width: 1000px;
 	margin: 10px auto;*/
+	min-height: 500px;
 }
 
 .top{
-
+	
 }
 .top .navbar {
 	font-size: 18px;
@@ -211,4 +212,11 @@ body {
 	background-color: #6F6F6F;
 	padding: 5px;
 	margin-right: 5px;
+}
+
+.bg-white {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding:20px;
 }

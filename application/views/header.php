@@ -11,21 +11,14 @@
 		    <span class="icon-bar"></span>
 		    <span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span></a>
+		  <a class="navbar-brand" href="<? echo base_url();?>"><span class="glyphicon glyphicon-home"></span></a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav text-uppercase">
-		    <li class="active">
-		    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
-		    	<ul class="dropdown-menu" role="menu">
-			        <li><a href="#">Something else here</a></li>
-			        <li class="divider"></li>
-			        <li><a href="#">Separated link</a></li>
-			        <li class="divider"></li>
-			        <li><a href="#">One more separated link</a></li>
-		      	</ul>
+		    <li <? if ($page=="about") {?> class="active"<? }?> >
+		    	<a href="<? echo base_url();?>aboutus">About Us</a>
 		    </li>
 		    <li>
 		    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
@@ -50,8 +43,8 @@
 		    <li>
 		    	<a href="#">Blog</a>
 		    </li>
-		    <li>
-		    	<a href="#">Contact</a>
+		    <li <? if ($page=="contact") {?> class="active"<? }?>>
+		    	<a href="<? echo base_url();?>contact">Contact</a>
 		    </li>
 		  </ul>
 		  <form class="navbar-form navbar-left pull-right" role="search">
