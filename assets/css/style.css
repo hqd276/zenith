@@ -1,0 +1,214 @@
+body {
+	background: url('../images/travel_header.jpg') top left no-repeat;
+	background-size: 100% auto;
+	width: 100%;
+}
+
+.container {
+	/*max-width: 1000px;
+	margin: 10px auto;*/
+}
+
+.top{
+
+}
+.top .navbar {
+	font-size: 18px;
+}
+.top .navbar-nav > li > a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.top .navbar-brand {
+	padding: 20px;
+}
+
+.logo {
+	background: url('../images/logo.png');
+	width: 350px;
+	height: 60px;
+	display: block;
+	margin: 40px 0;
+}
+
+.middle{
+
+}
+.carousel {
+
+}
+
+.carousel-inner > .item > img {
+    top: 0;
+    left: 0;
+    min-width: 100%;
+}
+.carousel-inner > .item > .carousel-caption {
+	position: absolute;
+	left: 100px;
+	top : 200px;
+	text-align: left;
+	font-weight: 600;
+	color: #fff;
+	font-size: 50px;
+	line-height: 50px;
+}
+.carousel-control {
+	position: absolute;
+	left: 100px;
+	top : 300px;
+	width: 53px;
+	height: 53px;
+	opacity: 1;
+	z-index: 10;
+}
+.carousel-control.left {
+	background:url('../images/nav-slider.png') no-repeat 0px 0;
+}
+.carousel-control.left:hover {
+	background:url('../images/nav-slider.png') no-repeat 0px -54px;
+}
+.carousel-control.right {
+	background:url('../images/nav-slider.png') no-repeat -53px 0;
+	left: 155px;
+}
+.carousel-control.right:hover {
+	background:url('../images/nav-slider.png') no-repeat -53px -54px;
+}
+
+.hotnews {
+	color: #fff;
+	margin: 30px -15px;
+}
+.hotnews .col-md-3 {
+	padding: 0 15px 0 15px;
+	float: left;
+}
+.hotnews h3 {
+	padding: 20px;
+	margin: 0;
+}
+.hotnews p {
+	padding: 20px;
+	margin: 0;
+}
+.hotnews img {
+	width: 100%;
+}
+.hotnews .more {
+	margin-left: 20px;
+	padding: 10px 20px;
+	background-color: #fff;
+}
+.hotnews .events {
+	background-color: #5ecdd4;
+	padding-bottom: 20px;
+}
+.hotnews .events .more{
+	color: #5ecdd4;
+}
+.hotnews .destinations {
+	background-color: #5ed4b1;
+	padding-bottom: 20px;
+}
+.hotnews .destinations .more{
+	color: #5ed4b1;
+}
+.hotnews .tours {
+	background-color: #d9bb4b;
+	padding-bottom: 20px;
+}
+.hotnews .tours .more{
+	color: #d9bb4b;
+}
+.hotnews .booking {
+	background-color: #cc668b;
+	padding-bottom: 20px;
+}
+.hotnews .booking .more{
+	color: #cc668b;
+}
+
+.hello img {
+	width: 270px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.content {
+	display: block;
+	overflow: hidden;
+	margin-top: 30px ;
+	margin-bottom: 30px ;
+}
+.content strong{
+	color: #5ecdd4;
+	font-weight: 600;
+}
+.content h3,h4 {
+	color: #181818;
+	font-weight: 300;
+	margin: 1px 0 25px 5px;
+	padding: 0;
+}
+
+.content h3 strong {
+	font-size: 42px;
+}
+.content h4 {
+	font-size: 25px;
+}
+.content div {
+	padding-bottom: 20px;
+}
+.content .more {
+	margin: 20px 0;
+	padding: 10px 20px;
+	color: #fff;
+	background-image: linear-gradient(to bottom,#30373f,#272d33);
+	box-shadow: 1px 2px 0 rgba(0,0,0,0.3);
+	background-repeat:repeat-x;
+}
+
+.bottom{
+	color: #727272;
+	background-color: #292F36;
+	padding: 30px 0;
+	margin-top: 20px;
+}
+.bottom a{
+	color: #727272;
+	line-height: 16px;
+}
+.bottom a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+.bottom .footer{
+	max-width: 1000px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+.bottom .logo{
+	background: url('../images/logo-footer.png');
+	width: 210px;
+	height: 37px;
+	display: block;
+}
+.bottom h4 {
+	color: #fff;
+}
+.bottom ul {
+	padding: 0;
+	list-style: none;
+}
+.bottom ul li {
+	padding: 5px 0;	
+}
+.bottom ul li .glyphicon-chevron-right {
+	color: #fff;
+	font-size: 6px;
+	background-color: #6F6F6F;
+	padding: 5px;
+	margin-right: 5px;
+}
