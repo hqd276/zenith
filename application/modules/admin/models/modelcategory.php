@@ -6,18 +6,27 @@ class ModelCategory extends CI_Model{
 		parent::__construct(); 
 	} 
 
-	function getAllCategories($type) {
-		$query = $this->db->where('type',$type)->get($this->_name);
-		return $query->result();
-	}
+	function getCategories($where,$limit = null) {
+		$strWhere = "";
+		if (is_array($where)) {
+			foreach ($where as $key => $value) {
+				$strWhere .= " AND $key = $value";
+			}
+		}
+		$strLimit = "";
+		if ($limit!=null) 
+			$strLimit = $limit;
 
-	function getCategories($type,$begin,$limit) {
-		$query = $this->db->where('type',$type)->get($this->_name, $limit, $begin);
-		return $query->result();
+		$query = $this->db->query("SELECT * FROM $this->_name WHERE 1=1 $strWhere $strLimit ");
+		return $query->result_array();
 	}
 
 	function insertCategory($data) {
 		return $this->db->insert($this->_name, $data); 
+	}
+
+	function getCategoryById($id){
+
 	}
 
 }

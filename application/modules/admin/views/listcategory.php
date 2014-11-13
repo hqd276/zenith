@@ -13,9 +13,9 @@
 		<?php if(count($list)>0){ ?>
 			<?php foreach($list as $item) {?>
 			<tr>
-				<td><?php echo $item->id?></td>
-				<td><?php echo $item->name?></td>
-				<td><?php echo $item->parent?></td>
+				<td><?php echo $item["id"]?></td>
+				<td><?php echo $item["name"]?></td>
+				<td><?php echo $item["parent"]?></td>
 				<td>
 					<a href="#" class="btn btn-default"> Delete </a>
 					<a href="#" class="btn btn-default"> Reply </a>
