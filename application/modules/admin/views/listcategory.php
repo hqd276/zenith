@@ -1,5 +1,7 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">List category</h2>
+	<a href="/add-category/<?php echo $type;?>" class="btn btn-default pull-right"> Add new Category </a>
+	
 	<table class="table table-bordered">
 		<thead>
 			<th>Id</th>

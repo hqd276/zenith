@@ -6,9 +6,18 @@ class ModelCategory extends CI_Model{
 		parent::__construct(); 
 	} 
 
+	function getAllCategories($type) {
+		$query = $this->db->where('type',$type)->get($this->_name);
+		return $query->result();
+	}
+
 	function getCategories($type,$begin,$limit) {
 		$query = $this->db->where('type',$type)->get($this->_name, $limit, $begin);
 		return $query->result();
+	}
+
+	function insertCategory($data) {
+		return $this->db->insert($this->_name, $data); 
 	}
 
 }

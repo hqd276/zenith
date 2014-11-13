@@ -54,6 +54,8 @@ $route['contact'] = "contact";
 $route['admin'] = "admin";
 $route['list-support'] = "admin/support";
 $route['list-category/(:num)'] = "admin/category/index/$1";
+$route['add-category/(:num)'] = "admin/category/add/$1";
+$route['edit-category/(:num)/(:num)'] = "admin/category/edit/$1/$2";
 
 
 /* End of file routes.php */

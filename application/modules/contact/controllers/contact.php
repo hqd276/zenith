@@ -20,7 +20,7 @@ class Contact extends CI_controller {
 		$data['page'] = 'contact';
 
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|valid_email'); 
-		$this->form_validation->set_rules('content', 'Content', 'required|min_length[10]'); 
+		$this->form_validation->set_rules('content', 'Content', 'required|min_length[5]'); 
 
 		#Kiểm tra điều kiện validate 
 		if($this->form_validation->run() == TRUE){ 
