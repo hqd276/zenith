@@ -2,11 +2,12 @@
 	<h2 class="text-uppercase">List category</h2>
 	<a href="/add-category/<?php echo $type;?>" class="btn btn-default pull-right"> Add new Category </a>
 	
-	<table class="table table-bordered">
+	<table class="table table-bordered table-hover">
 		<thead>
 			<th>Id</th>
 			<th>Email</th>
 			<th>Parent</th>
+			<th>Status</th>
 			<th>Action</th>
 		</thead>
 		<tbody>
@@ -16,15 +17,16 @@
 				<td><?php echo $item["id"]?></td>
 				<td><?php echo $item["name"]?></td>
 				<td><?php echo $item["parent"]?></td>
+				<td><?php echo $item["status"]?></td>
 				<td>
 					<a href="#" class="btn btn-default"> Delete </a>
-					<a href="#" class="btn btn-default"> Reply </a>
+					<a href="<?php echo base_url("edit-category/".$type."/".$item["id"]);?>" class="btn btn-default"> Edit </a>
 				</td>
 			</tr>
 			<?php }?>
 		<?php }else{?>
 			<tr>
-				<td class="text-center" colspan="4">Don't have any Item!</td>
+				<td class="text-center" colspan="5">Don't have any Item!</td>
 			</tr>
 		<?php }?>
 		</tbody>

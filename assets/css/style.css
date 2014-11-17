@@ -24,6 +24,13 @@ body {
 	padding: 20px;
 }
 
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    margin-top: 0px;
+}
+
 .logo {
 	background: url('../images/logo.png');
 	width: 350px;

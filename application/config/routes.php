@@ -51,12 +51,22 @@ $route['logout'] = "user/logout";
 $route['aboutus'] = "about";
 $route['contact'] = "contact";
 
+$route['news'] = "news";
+$route['news/list/(:num)'] = "news/index/$1";
+$route['news/list/(:num)/(:num)'] = "news/index/$1/$2";
+
 $route['admin'] = "admin";
 $route['list-support'] = "admin/support";
+
 $route['list-category/(:num)'] = "admin/category/index/$1";
 $route['add-category/(:num)'] = "admin/category/add/$1";
 $route['edit-category/(:num)/(:num)'] = "admin/category/edit/$1/$2";
 
+$route['list-news/(:num)'] = "admin/news/index/$1";
+$route['add-news/(:num)'] = "admin/news/add/$1";
+$route['edit-news/(:num)/(:num)'] = "admin/news/edit/$1/$2";
+
+$route['header'] = "header";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

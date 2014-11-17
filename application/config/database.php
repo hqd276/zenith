@@ -48,6 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+// $db['default']['hostname'] = 'localhost';
+// $db['default']['username'] = 'zenithvi_ci';
+// $db['default']['password'] = '123654789';
+// $db['default']['database'] = 'zenithvi_ci';
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';

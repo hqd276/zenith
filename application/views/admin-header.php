@@ -24,7 +24,7 @@
 	                <a tabindex="-1" href="#">News & Events</a>
 	                <ul class="dropdown-menu">
 	                  	<li><a href="<? echo base_url();?>list-category/0">News Category Manager</a></li>
-	                  	<li><a href="#">News Manager</a></li>
+	                  	<li><a href="<? echo base_url();?>list-news/0">News Manager</a></li>
 	                </ul>
 	              	</li>
 	              	<li class="divider"></li>
@@ -32,7 +32,7 @@
 	                <a tabindex="-1" href="#">Destinations</a>
 	                <ul class="dropdown-menu">
 	                  	<li><a href="<? echo base_url();?>list-category/1">Destinations Category Manager</a></li>
-	                  	<li><a href="#">Destinations Manager</a></li>
+	                  	<li><a href="<? echo base_url();?>list-news/1">Destinations Manager</a></li>
 	                </ul>
 	              	</li>
 	              	<li class="divider"></li>
@@ -40,7 +40,7 @@
 	                <a tabindex="-1" href="#">Tours</a>
 	                <ul class="dropdown-menu">
 	                  	<li><a href="<? echo base_url();?>list-category/2">Tours Category Manager</a></li>
-	                  	<li><a href="#">Tours Manager</a></li>
+	                  	<li><a href="<? echo base_url();?>list-news/2">Tours Manager</a></li>
 	                </ul>
 	              	</li>
 	              	<li class="divider"></li>
@@ -48,7 +48,7 @@
 	                <a tabindex="-1" href="#">Blog</a>
 	                <ul class="dropdown-menu">
 	                  	<li><a href="<? echo base_url();?>list-category/3">Blog Category Manager</a></li>
-	                  	<li><a href="#">Blog Manager</a></li>
+	                  	<li><a href="<? echo base_url();?>list-news/3">Blog Manager</a></li>
 	                </ul>
 	              	</li>
 	          	</ul>

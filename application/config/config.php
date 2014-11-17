@@ -15,6 +15,7 @@
 |
 */
 $config['base_url']	= 'http://local.zenith.vn/';
+// $config['base_url']	= 'http://zenithvietnamtours.com/';
 
 /*
 |--------------------------------------------------------------------------

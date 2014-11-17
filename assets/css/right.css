@@ -1,0 +1,40 @@
+h2 {
+	color: #5ecdd4;
+}
+.item {
+	padding: 20px 0;
+	position: relative;
+}
+.item a{
+	text-decoration: none;
+}
+.item img {
+	float: left;
+	width: 100%;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.item span {
+	color: #d9bb4b;
+}
+.item h4 {
+	color: #5ecdd4;
+}
+.item h4:hover {
+	color: #d9bb4b;
+	cursor: pointer;
+}
+.item p {
+	color: #787878;
+}
+
+.item .more {
+	position: absolute;
+	bottom: 0;
+	right: 30px;
+	padding: 10px 20px;
+	color: #fff;
+	background-image: linear-gradient(to bottom,#30373f,#272d33);
+	box-shadow: 1px 2px 0 rgba(0,0,0,0.3);
+	background-repeat:repeat-x;
+}

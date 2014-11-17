@@ -6,7 +6,7 @@ class ModelCategory extends CI_Model{
 		parent::__construct(); 
 	} 
 
-	function getCategories($where,$limit = null) {
+	function getCategories($where = null,$limit = null) {
 		$strWhere = "";
 		if (is_array($where)) {
 			foreach ($where as $key => $value) {
@@ -24,9 +24,14 @@ class ModelCategory extends CI_Model{
 	function insertCategory($data) {
 		return $this->db->insert($this->_name, $data); 
 	}
+	function updateCategory($id,$data) {
+		$this->db->where('id', $id);
+		return $this->db->update($this->_name, $data); 
+	}
 
 	function getCategoryById($id){
-
+		$query = $this->db->query("SELECT * FROM $this->_name WHERE id = ".$id);
+		return $query->row_array();
 	}
 
 }

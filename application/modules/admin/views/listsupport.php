@@ -1,6 +1,6 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">List support</h2>
-	<table class="table table-bordered">
+	<table class="table table-bordered table-hover">
 		<thead>
 			<th>Id</th>
 			<th>Email</th>

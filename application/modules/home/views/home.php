@@ -48,36 +48,36 @@
 	<div class="col-md-3">
 		<div class="events">
 			<h3 class="text-uppercase">News <br/><strong>& Events</strong></h3>
-			<img src="<? echo base_url();?>images/slider/1.jpg"/>
+			<img src="<? echo base_url();?>images/home1.jpg"/>
 			<p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
-			<a href="#" class="text-uppercase more">More</a>
+			<a href="<? echo base_url();?>news/list/0" class="text-uppercase more">More</a>
 		</div>
 	</div>
 	
 	<div class="col-md-3">
 		<div class="destinations">
 			<h3 class="text-uppercase">New <br/><strong>destinations</strong></h3>
-			<img src="<? echo base_url();?>images/slider/1.jpg"/>
+			<img src="<? echo base_url();?>images/home2.jpg"/>
 			<p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
-			<a href="#" class="text-uppercase more">More</a>
+			<a href="<? echo base_url();?>news/list/1" class="text-uppercase more">More</a>
 		</div>
 	</div>
 	
 	<div class="col-md-3">
 		<div class="tours">
 			<h3 class="text-uppercase">Popular <br/><strong>Tours</strong></h3>
-			<img src="<? echo base_url();?>images/slider/1.jpg"/>
+			<img src="<? echo base_url();?>images/home3.jpg"/>
 			<p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
-			<a href="#" class="text-uppercase more">More</a>
+			<a href="<? echo base_url();?>news/list/3" class="text-uppercase more">More</a>
 		</div>
 	</div>
 	
 	<div class="col-md-3">
 		<div class="booking">
 			<h3 class="text-uppercase">Booking <br/><strong>Online</strong></h3>
-			<img src="<? echo base_url();?>images/slider/1.jpg"/>
+			<img src="<? echo base_url();?>images/home4.jpg"/>
 			<p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
-			<a href="#" class="text-uppercase more">More</a>
+			<a href="<? echo base_url();?>contact" class="text-uppercase more">More</a>
 		</div>
 	</div>
 </div>
@@ -96,7 +96,7 @@
 		Lorem ipsum dolor sit amet, consete ctetur adipiscing. Duis eros ligula la quiseuismod dignisim atne liquam quis consectetur magna liquam sed nibh condimentum. ligula con eges. Curabitur eget massa neque, non laoreet purus. Etiam id eros in dultricies posu
 		a mauris. Sed accumsan placerat ultricies.</p>
 		<div class="clearfix"></div>
-		<a href="#" class="text-uppercase more">More</a>
+		<a href="<? echo base_url();?>aboutus" class="text-uppercase more">More</a>
 	</div>
 	<div class="supports col-md-3">
 		<div>
@@ -104,11 +104,11 @@
 			<strong>SUPPORT</strong></h4>
 			<p>Donec sit amet felis orci. Fusce et mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auctor consectetur.</p>
 			<div class="clearfix"></div>
-			<a href="#" class="text-uppercase more">More</a>
+			<a href="<? echo base_url();?>contact" class="text-uppercase more">More</a>
 		</div>
 		<div>
-			<h4 class="text-uppercase">24/7 CLIENT <br>
-			<strong>SUPPORT</strong></h4>
+			<h4 class="text-uppercase">VIEW <br>
+			<strong>OUR GALLERY</strong></h4>
 			<p>Donec sit amet felis orci. Fusce et mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auctor consectetur.</p>
 			<div class="clearfix"></div>
 			<a href="#" class="text-uppercase more">More</a>
@@ -116,15 +116,15 @@
 	</div>
 	<div class="services col-md-3">
 		<div>
-			<h4 class="text-uppercase">24/7 CLIENT <br>
-			<strong>SUPPORT</strong></h4>
+			<h4 class="text-uppercase">100% SATISFACTION <br>
+			<strong>GUARANTEE</strong></h4>
 			<p>Donec sit amet felis orci. Fusce et mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auctor consectetur.</p>
 			<div class="clearfix"></div>
 			<a href="#" class="text-uppercase more">More</a>
 		</div>
 		<div>
-			<h4 class="text-uppercase">24/7 CLIENT <br>
-			<strong>SUPPORT</strong></h4>
+			<h4 class="text-uppercase">TOP  <br>
+			<strong>SERVICES</strong></h4>
 			<p>Donec sit amet felis orci. Fusce et mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auctor consectetur.</p>
 			<div class="clearfix"></div>
 			<a href="#" class="text-uppercase more">More</a>

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class User extends CI_controller {
+class User extends MX_controller {
 	private $b_Check = true;
 
 	public function __construct(){
@@ -13,10 +13,8 @@ class User extends CI_controller {
 		#Tải model 
 		$this->load->model(array('model'));
 		
-		$data = array();
-		$data['page'] = '';
-
-		$this->template->set_partial('header','header',$data);
+		$data = Modules::run('header','home');
+		$this->template->set_partial('header','header',$data );
 		$this->template->set_partial('footer','footer');
 	}
 	

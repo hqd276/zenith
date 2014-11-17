@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Category extends CI_Controller{
+class Category extends MX_Controller{
 
 	public function __construct(){
 		parent::__construct();
@@ -37,53 +37,59 @@ class Category extends CI_Controller{
 
 	public function add($type=0){
 		$data = array();
+		$data['type'] = $type;
 		$data['title'] = "Add new category";
-		$category = $this->modelcategory->getCategories(array("type"=>$type));
-		$data['category'] = $category;
-		
+
 		#Tải thư viện và helper của Form trên CodeIgniter 
 		$this->load->helper(array('form')); 
-		$this->load->library(array('form_validation'));
+		$this->load->helper(array('util')); 
 
-		$config['upload_path'] = './uploads/categories/';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '2000';
-		// $config['max_width'] = '1024';
-		// $config['max_height'] = '768';
+		$category = $this->modelcategory->getCategories(array("type"=>$type));
+		// $category = add_array_key("id",$category);
 
-		$this->load->library('upload', $config);
+		$dataC = array('name' =>'',
+						'parent' =>'',
+						'description' =>'',
+						'status' =>'',
+						'type' =>'',
+						'image' =>'',);
+		
+		if ($this->input->post('submit') == "ok") {
+			$this->load->library(array('form_validation'));
 
-		// Alternately you can set preferences by calling the initialize function. Useful if you auto-load the class:
-		// $this->upload->initialize($config);
+			$this->form_validation->set_rules('name', 'Name', 'required|min_length[3]'); 
 
-		$this->form_validation->set_rules('name', 'Name', 'required|min_length[5]'); 
+			#Kiểm tra điều kiện validate 
+			if($this->form_validation->run() == TRUE){ 
+				$dataC['name'] = $this->input->post('name'); 
+				$dataC['parent'] = $this->input->post('parent'); 
+				$dataC['description'] = $this->input->post('description'); 
+				if ($this->input->post('status'))
+					$dataC['status'] = 1;
+				else 
+					$dataC['status'] = 0;
+				$dataC['type'] = $type; 
 
-		#Kiểm tra điều kiện validate 
-		if($this->form_validation->run() == TRUE){ 
-			$dataC['name'] = $this->input->post('name'); 
-			// $dataC['image'] = $this->input->post('image'); 
-			$dataC['parent'] = $this->input->post('parent'); 
-			$dataC['description'] = $this->input->post('description'); 
-			if ($this->input->post('status'))
-				$dataC['status'] = 1;
-			else 
-				$dataC['status'] = 0;
-			// $dataC['status'] = $this->input->post('status'); 
-			$dataC['type'] = $type; 
+				if (!empty ($_FILES['image'])) {
+					$this->load->model(array('Mgallery'));
+					$image_data = $this->Mgallery->do_upload("/categories/");
+					if ($image_data) {
+						$dataC['image'] = $image_data["file_name"];
+					}
+				}
 
-			$this->load->model(array('Mgallery'));
-			if ($this->Mgallery->do_upload()) {
-				$image_data = $this->Mgallery->do_upload();
-				$dataC['image'] = $image_data["file_name"];
-			}
+				if ($this->modelcategory->insertCategory($dataC)){
+					$data['b_Check']= true;
+					// redirect(base_url('list-category/'.$type));
+				}else{
+					$data['b_Check']= false;
+				}
+			} 
+		}
 
-			if ($this->modelcategory->insertCategory($dataC)){
-				$data['b_Check']= true;
-				// redirect(base_url('list-category/'.$type));
-			}else{
-				$data['b_Check']= false;
-			}
-		} 
+		$data['category_box'] = $this->category_box($category, $dataC);
+
+		$data['item'] = $dataC;
 		$this->template->build('addcategory',$data);
 	}
 	public function edit($type=0,$id=0){
@@ -91,12 +97,73 @@ class Category extends CI_Controller{
 		if ($id<=0)
 			redirect(base_url('list-category/'.$type));
 
+		$data['type'] = $type;
 		$data['title'] = "Edit category";
+
+		$category = $this->modelcategory->getCategories(array("type"=>$type));
+		$data['category'] = $category;
 
 		#Tải thư viện và helper của Form trên CodeIgniter 
 		$this->load->helper(array('form')); 
-		$this->load->library(array('form_validation'));
+
+		$dataC = $this->modelcategory->getCategoryById($id);
+		
+		if ($this->input->post('submit') == "ok") {
+			$this->load->library(array('form_validation'));
+
+			$this->form_validation->set_rules('name', 'Name', 'required|min_length[3]'); 
+
+			#Kiểm tra điều kiện validate 
+			if($this->form_validation->run() == TRUE){ 
+				$dataC['name'] = $this->input->post('name'); 
+				$dataC['parent'] = $this->input->post('parent'); 
+				$dataC['description'] = $this->input->post('description'); 
+				if ($this->input->post('status'))
+					$dataC['status'] = 1;
+				else 
+					$dataC['status'] = 0;
+				$dataC['type'] = $type; 
+
+				if (!empty ($_FILES['image'])) {
+					$this->load->model(array('Mgallery'));
+					$image_data = $this->Mgallery->do_upload("/categories/");
+					if ($image_data) {
+						$dataC['image'] = $image_data["file_name"];
+					}
+				}
+
+				if ($this->modelcategory->updateCategory($dataC['id'],$dataC)){
+					$data['b_Check']= true;
+					// redirect(base_url('list-category/'.$type));
+				}else{
+					$data['b_Check']= false;
+				}
+			} 
+		}
+		$data['item'] = $dataC;
 
 		$this->template->build('addcategory',$data);
+	}
+
+	function category_box ($category, $dataC) {
+		$category_box = "";
+		foreach ($category as $key => $value) {
+			if ($value["parent"] == -1) {
+				$category_box.= "<option value='".$value['id']."' ";
+				$category_box.= ($dataC['parent'] == $value['id'])?'selected':'';
+				$category_box.= ">".$value['name']."</option>";
+				// $child = array();
+				foreach ($category as $k => $v) {
+					if ($v["parent"] == $value["id"]){
+						$category_box.= "<option value='".$v['id']."' ";
+						$category_box.= ($dataC['parent'] == $v['id'])?'selected':'';
+						$category_box.= "> -- ".$v['name']."</option>";
+						// $child[] = $v;
+					}
+				}
+				// $category[$key]["child"]= $child;
+			}
+		}
+		return $category_box;
 	}
 }

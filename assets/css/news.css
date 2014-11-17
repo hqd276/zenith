@@ -1,0 +1,51 @@
+.news-form h2 {
+	color: #5ecdd4;
+}
+.news-form .item {
+	padding: 20px 0;
+	position: relative;
+}
+.news-form .item a{
+	text-decoration: none;
+}
+.news-form .item img {
+	float: left;
+	width: 270px;
+	min-height: 180px;
+	margin-right: 20px;
+}
+.news-form .item span {
+	color: #d9bb4b;
+}
+.news-form .item h4 {
+	color: #5ecdd4;
+}
+.news-form .item h4:hover {
+	color: #d9bb4b;
+	cursor: pointer;
+}
+.news-form .item p {
+	color: #787878;
+}
+
+.news-form .item .more {
+	position: absolute;
+	bottom: 0;
+	right: 30px;
+	padding: 10px 20px;
+	color: #fff;
+	background-image: linear-gradient(to bottom,#30373f,#272d33);
+	box-shadow: 1px 2px 0 rgba(0,0,0,0.3);
+	background-repeat:repeat-x;
+}
+
+.news-detail .col-md-12 {
+	margin: 20px 0;
+}
+.news-detail .description {
+
+}
+
+.news-detail .glyphicon {
+	margin: 0 10px;
+}

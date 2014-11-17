@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Contact extends CI_controller {
+class Contact extends MX_Controller {
 	public function __construct(){
 		parent::__construct();
 
@@ -11,7 +11,8 @@ class Contact extends CI_controller {
 		#Tải model 
 		$this->load->model(array('model'));
 
-		$this->template->set_partial('header','header');
+		$data = Modules::run('header','home');
+		$this->template->set_partial('header','header',$data );
 		$this->template->set_partial('footer','footer');
 	}
 	
@@ -36,7 +37,6 @@ class Contact extends CI_controller {
 			
 		} 
 
-		 
 		$this->template->build('contact',$data);
 	}
 	
