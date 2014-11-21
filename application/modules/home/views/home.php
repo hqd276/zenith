@@ -44,40 +44,48 @@
 	</a>
 </div>
 
-<div class="hotnews">
-	<div class="col-md-3">
-		<div class="events">
+<div class="hotnews row">
+	<div class="col-sm-6 col-md-3">
+		<div class="thumbnail events">
 			<h3 class="text-uppercase">News <br/><strong>& Events</strong></h3>
-			<img src="<? echo base_url();?>images/home1.jpg"/>
-			<p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
-			<a href="<? echo base_url();?>news/list/0" class="text-uppercase more">More</a>
+		  	<img src="<? echo base_url();?>images/home1.jpg" alt="...">
+		  	<div class="caption">
+			    <p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
+		  		<a href="<? echo base_url();?>news/list/0" class="text-uppercase more">More</a>
+		  	</div>
 		</div>
 	</div>
-	
-	<div class="col-md-3">
-		<div class="destinations">
+
+	<div class="col-sm-6 col-md-3">
+		<div class="thumbnail destinations">
 			<h3 class="text-uppercase">New <br/><strong>destinations</strong></h3>
-			<img src="<? echo base_url();?>images/home2.jpg"/>
-			<p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
-			<a href="<? echo base_url();?>news/list/1" class="text-uppercase more">More</a>
+		  	<img src="<? echo base_url();?>images/home2.jpg" alt="...">
+		  	<div class="caption">
+			    <p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
+		  		<a href="<? echo base_url();?>news/list/1" class="text-uppercase more">More</a>
+		  	</div>
 		</div>
 	</div>
-	
-	<div class="col-md-3">
-		<div class="tours">
+
+	<div class="col-sm-6 col-md-3">
+		<div class="thumbnail tours">
 			<h3 class="text-uppercase">Popular <br/><strong>Tours</strong></h3>
-			<img src="<? echo base_url();?>images/home3.jpg"/>
-			<p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
-			<a href="<? echo base_url();?>news/list/3" class="text-uppercase more">More</a>
+		  	<img src="<? echo base_url();?>images/home3.jpg" alt="...">
+		  	<div class="caption">
+			    <p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
+		  		<a href="<? echo base_url();?>news/list/1" class="text-uppercase more">More</a>
+		  	</div>
 		</div>
 	</div>
-	
-	<div class="col-md-3">
-		<div class="booking">
-			<h3 class="text-uppercase">Booking <br/><strong>Online</strong></h3>
-			<img src="<? echo base_url();?>images/home4.jpg"/>
-			<p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
-			<a href="<? echo base_url();?>contact" class="text-uppercase more">More</a>
+
+	<div class="col-sm-6 col-md-3">
+		<div class="thumbnail booking">
+			<h3 class="text-uppercase">New <br/><strong>destinations</strong></h3>
+		  	<img src="<? echo base_url();?>images/home4.jpg" alt="...">
+		  	<div class="caption">
+			    <p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
+		  		<a href="<? echo base_url();?>contact" class="text-uppercase more">More</a>
+		  	</div>
 		</div>
 	</div>
 </div>

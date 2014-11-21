@@ -29,9 +29,6 @@ h2 {
 }
 
 .item .more {
-	position: absolute;
-	bottom: 0;
-	right: 30px;
 	padding: 10px 20px;
 	color: #fff;
 	background-image: linear-gradient(to bottom,#30373f,#272d33);

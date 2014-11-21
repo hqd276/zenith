@@ -8,6 +8,7 @@ class News extends MX_Controller {
 
 		#Tải thư viện và helper của Form trên CodeIgniter 
 		$this->load->helper(array('form')); 
+		$this->load->helper(array('util_helper')); 
 		$this->load->library(array('form_validation'));
 
 		#Tải model 
@@ -46,12 +47,12 @@ class News extends MX_Controller {
 				break;
 		}
 
-		$category = $this->modelcategory->getCategoryById($cat);
-		$data['cat'] = $category;
-
 		if ($cat>0){
+			$category = $this->modelcategory->getCategoryById($cat);
+			$data['cat'] = $category;
 			$list_news = $this->modelnews->getNews(array('category_id'=>$cat),' LIMIT 0,5');
 		}else{
+			$data['cat'] = array('type'=>$type,'id'=>0,'name'=>'');
 			$list_news = $this->modelnews->getNews(array('type'=>$type),' LIMIT 0,5');
 		}
 
