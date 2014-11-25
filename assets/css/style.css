@@ -86,6 +86,7 @@ body {
 
 .hotnews {
 	margin: 30px -15px;
+	color: #fff;
 }
 .hotnews .thumbnail {
 	padding: 0;
@@ -103,6 +104,12 @@ body {
 .hotnews p {
 	padding: 20px;
 	margin: 0;
+}
+.hotnews a.img {
+	display: block;
+	height: 140px;
+	overflow: hidden;
+
 }
 .hotnews .more {
 	margin-left: 20px;

@@ -48,9 +48,11 @@
 	<div class="col-sm-6 col-md-3">
 		<div class="thumbnail events">
 			<h3 class="text-uppercase">News <br/><strong>& Events</strong></h3>
-		  	<img src="<? echo base_url();?>images/home1.jpg" alt="...">
+			<a href="<? echo base_url();?>news/list/0" class="img">
+		  	<img src="<? echo base_url()."uploads/settings/".$setting['news']['data']->image;?>" alt="...">
+		  	</a>
 		  	<div class="caption">
-			    <p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
+			    <p><?php echo split_char($setting['news']['data']->description,100,1)." ...";?></p>
 		  		<a href="<? echo base_url();?>news/list/0" class="text-uppercase more">More</a>
 		  	</div>
 		</div>
@@ -59,9 +61,11 @@
 	<div class="col-sm-6 col-md-3">
 		<div class="thumbnail destinations">
 			<h3 class="text-uppercase">New <br/><strong>destinations</strong></h3>
-		  	<img src="<? echo base_url();?>images/home2.jpg" alt="...">
+		  	<a href="<? echo base_url();?>news/list/1" class="img">
+		  	<img src="<? echo base_url()."uploads/settings/".$setting['destination']['data']->image;?>" alt="...">
+		  	</a>
 		  	<div class="caption">
-			    <p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
+			    <p><?php echo split_char($setting['destination']['data']->description,100,1)." ...";?></p>
 		  		<a href="<? echo base_url();?>news/list/1" class="text-uppercase more">More</a>
 		  	</div>
 		</div>
@@ -70,21 +74,25 @@
 	<div class="col-sm-6 col-md-3">
 		<div class="thumbnail tours">
 			<h3 class="text-uppercase">Popular <br/><strong>Tours</strong></h3>
-		  	<img src="<? echo base_url();?>images/home3.jpg" alt="...">
+		  	<a href="<? echo base_url();?>news/list/2" class="img">
+		  	<img src="<? echo base_url()."uploads/settings/".$setting['tour']['data']->image;?>" alt="...">
+		  	</a>
 		  	<div class="caption">
-			    <p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
-		  		<a href="<? echo base_url();?>news/list/1" class="text-uppercase more">More</a>
+			    <p><?php echo split_char($setting['tour']['data']->description,100,1)." ...";?></p>
+		  		<a href="<? echo base_url();?>news/list/2" class="text-uppercase more">More</a>
 		  	</div>
 		</div>
 	</div>
 
 	<div class="col-sm-6 col-md-3">
 		<div class="thumbnail booking">
-			<h3 class="text-uppercase">New <br/><strong>destinations</strong></h3>
-		  	<img src="<? echo base_url();?>images/home4.jpg" alt="...">
+			<h3 class="text-uppercase">New <br/><strong>blogs</strong></h3>
+		  	<a href="<? echo base_url();?>news/list/3" class="img">
+		  	<img src="<? echo base_url()."uploads/settings/".$setting['blog']['data']->image;?>" alt="...">
+		  	</a>
 		  	<div class="caption">
-			    <p>Donec sit amet felis orci. Fuscet mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auct consectetur, nulla est.</p>
-		  		<a href="<? echo base_url();?>contact" class="text-uppercase more">More</a>
+			    <p><?php echo split_char($setting['blog']['data']->description,100,1)." ...";?></p>
+		  		<a href="<? echo base_url();?>news/list/3" class="text-uppercase more">More</a>
 		  	</div>
 		</div>
 	</div>
@@ -94,15 +102,10 @@
 	<div class="hello col-md-6">
 		<h3 class="text-uppercase"><strong>HELLO THERE!</strong> <br>
 		WELCOME TO OUR SITE</h3>
-		<img src="<? echo base_url();?>images/home.png"/>
-		<p>PHASELLUS TURPIS ORG
-		PELLENTE DOLOR AVEL<br>
-
-		Lorem ipsum dolor sit amet, cons ctet adipiscing. Duis eros ligula la quiseuis
-		in dignisim atne liquam quis consectet magna liquam sed nibh condimentum.
-
-		Lorem ipsum dolor sit amet, consete ctetur adipiscing. Duis eros ligula la quiseuismod dignisim atne liquam quis consectetur magna liquam sed nibh condimentum. ligula con eges. Curabitur eget massa neque, non laoreet purus. Etiam id eros in dultricies posu
-		a mauris. Sed accumsan placerat ultricies.</p>
+		<a href="<? echo base_url();?>aboutus" class="img">
+	  		<img src="<? echo base_url()."uploads/settings/".$setting['about']['data']->image;?>" alt="...">
+	  	</a>
+		<p><?php echo $setting['blog']['data']->description;?></p>
 		<div class="clearfix"></div>
 		<a href="<? echo base_url();?>aboutus" class="text-uppercase more">More</a>
 	</div>

@@ -12,7 +12,11 @@ class About extends MX_Controller{
 	public function index(){
 		$data = array();
 		$data['page'] = 'about';
-		
+		$this->load->model(array('admin/modelsetting'));
+		$about = $this->modelsetting->getSettingByKey('about');
+		$about['data'] = json_decode($about['value']);
+		$data['about'] = $about;
+
 		$this->template->build('about',$data);
 	}
 	

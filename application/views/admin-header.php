@@ -57,6 +57,7 @@
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">System <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
 	          		<li><a href="<? echo base_url();?>list-support">Supports</a></li>
+	          		<li><a href="<? echo base_url();?>setting">Settings</a></li>
 	          	</ul>
           	</li>
 		  </ul>

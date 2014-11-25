@@ -20,11 +20,14 @@ class Header extends MX_Controller{
 		foreach ($categories as $key => $value) {
 			if ($value['type'] == 0) {
 				$cat_news_events[] = $value;
+			}elseif($value['type'] == 2) {
+				$cat_tour[] = $value;
 			}elseif($value['type'] == 3) {
 				$cat_blog[] = $value;
 			}
 		}
 		$data['cat_news_events'] = $cat_news_events;
+		$data['cat_tour'] = $cat_tour;
 		$data['cat_blog'] = $cat_blog;
 		$data['page'] = $page;
 		return $data;
