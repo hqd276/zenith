@@ -20,8 +20,8 @@
 		    <li <? if ($page=="about") {?> class="active"<? }?> >
 		    	<a href="<? echo base_url();?>aboutus">About Us</a>
 		    </li>
-		    <li>
-		    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
+		    <li <? if ($page=="gallery") {?> class="active"<? }?> >
+		    	<a href="<?php echo base_url().'gallery';?>" >Gallery</a>
 		    </li>
 		    <li class="dropdown <?php echo ($page=="news")?'active':'';?>">
 		      	<a href="<?php echo base_url().'news/list/0';?>" class="dropdown-toggle">News & Events</span></a>

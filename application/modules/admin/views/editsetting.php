@@ -25,21 +25,21 @@ tinymce.init({
 	<h2 class="text-uppercase"><?php echo $title?></h2>
 	<a href="/setting" class="btn btn-default pull-right"> List Setting </a>
 
-	<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data" action="">
+	<form class="form-horizontal col-md-12" role="form" method="post" enctype="multipart/form-data" action="">
 		<div class="form-group">
 			<div>
 				<span class="success">
 					<?php 
 					if(isset($b_Check))
 						if ($b_Check){
-							echo "Add Success!";
+							echo "<div class='alert alert-success' role='alert'>Add Success</div>";
 						}else{
-							echo "Add Fail";
+							echo "<div class='alert alert-danger' role='alert'>Add Fail</div>";
 						}
 					?>
 				</span>
-				<label class="control-label" for="inputError1"><?php echo form_error('name'); ?></label>
-				<label class="control-label" for="inputError1"><?php if(isset($upload_mess)) echo $upload_mess; ?></label>
+				<?php if(form_error('name')!='') echo '<label class="control-label alert alert-warning" for="inputError1">'.form_error('name').'</label>'; ?>
+				<?php if(isset($upload_mess)) echo '<label class="control-label alert alert-warning" for="inputError1">'.$upload_mess.'</label>'; ?>
 			</div>
 		</div>
 		<div class="form-group col-sm-12">

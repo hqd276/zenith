@@ -111,32 +111,32 @@
 	</div>
 	<div class="supports col-md-3">
 		<div>
-			<h4 class="text-uppercase">24/7 CLIENT <br>
+			<h4 class="text-uppercase">24/7 CLIENT /<br>
 			<strong>SUPPORT</strong></h4>
-			<p>Donec sit amet felis orci. Fusce et mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auctor consectetur.</p>
+			<p><?php echo $setting['support']['data']->description;?></p>
 			<div class="clearfix"></div>
 			<a href="<? echo base_url();?>contact" class="text-uppercase more">More</a>
 		</div>
 		<div>
-			<h4 class="text-uppercase">VIEW <br>
+			<h4 class="text-uppercase">VIEW /<br>
 			<strong>OUR GALLERY</strong></h4>
-			<p>Donec sit amet felis orci. Fusce et mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auctor consectetur.</p>
+			<p><?php echo $setting['gallery']['data']->description;?></p>
 			<div class="clearfix"></div>
 			<a href="#" class="text-uppercase more">More</a>
 		</div>
 	</div>
 	<div class="services col-md-3">
 		<div>
-			<h4 class="text-uppercase">100% SATISFACTION <br>
-			<strong>GUARANTEE</strong></h4>
-			<p>Donec sit amet felis orci. Fusce et mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auctor consectetur.</p>
+			<h4 class="text-uppercase">Booking /<br>
+			<strong>ONLINE</strong></h4>
+			<p><?php echo $setting['booking']['data']->description;?></p>
 			<div class="clearfix"></div>
 			<a href="#" class="text-uppercase more">More</a>
 		</div>
 		<div>
-			<h4 class="text-uppercase">TOP  <br>
+			<h4 class="text-uppercase">TOP  /<br>
 			<strong>SERVICES</strong></h4>
-			<p>Donec sit amet felis orci. Fusce et mollis lectus. Duis in mattis nibh. Mauris tempus, massa non auctor consectetur.</p>
+			<p><?php echo $setting['service']['data']->description;?></p>
 			<div class="clearfix"></div>
 			<a href="#" class="text-uppercase more">More</a>
 		</div>

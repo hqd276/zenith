@@ -36,6 +36,7 @@ class News extends MX_Controller {
 				break;
 			case 2:
 				$data['title'] = "Tours";
+				$data['page'] = "tour";
 				break;
 			case 3:
 				$data['title'] = "Blog";
