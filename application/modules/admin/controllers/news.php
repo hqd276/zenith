@@ -39,7 +39,24 @@ class News extends MX_Controller{
 
 		$data = array();
 		$data['type'] = $type;
-		$data['title'] = "Add new News";
+		switch ($type) {
+			case 0:
+				$data['title'] = 'News';
+				break;
+			case 1:
+				$data['title'] = 'Destination';
+				break;
+			case 2:
+				$data['title'] = 'Tour';
+				break;
+			case 3:
+				$data['title'] = 'Blog';
+				break;
+			
+			default:
+				$data['title'] = 'News';
+				break;
+		}
 
 		#Tải thư viện và helper của Form trên CodeIgniter 
 		$this->load->helper(array('form')); 
@@ -52,6 +69,7 @@ class News extends MX_Controller{
 		$dataC = array('title' =>'',
 						'description' =>'',
 						'detail' =>'',
+						'info' =>'',
 						'tag' =>'',
 						'author' =>'',
 						'category_id' =>'',
@@ -73,6 +91,7 @@ class News extends MX_Controller{
 				$dataC['title'] = $this->input->post('title'); 
 				$dataC['description'] = $this->input->post('description'); 
 				$dataC['detail'] = $this->input->post('detail'); 
+				$dataC['info'] = $this->input->post('info'); 
 				$dataC['tag'] = $this->input->post('tag'); 
 				$dataC['author'] = $user['id'];
 				$dataC['category_id'] = $this->input->post('category_id'); 
@@ -145,6 +164,7 @@ class News extends MX_Controller{
 				$dataC['title'] = $this->input->post('title'); 
 				$dataC['description'] = $this->input->post('description'); 
 				$dataC['detail'] = $this->input->post('detail'); 
+				$dataC['info'] = $this->input->post('info'); 
 				$dataC['tag'] = $this->input->post('tag'); 
 				// $dataC['author'] = $user['id'];
 				$dataC['category_id'] = $this->input->post('category_id'); 

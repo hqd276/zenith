@@ -25,6 +25,7 @@
 	                <ul class="dropdown-menu">
 	                  	<li><a href="<? echo base_url();?>list-category/0">News Category Manager</a></li>
 	                  	<li><a href="<? echo base_url();?>list-news/0">News Manager</a></li>
+	                  	<li><a href="<? echo base_url();?>add-news/0">Add new News</a></li>
 	                </ul>
 	              	</li>
 	              	<li class="divider"></li>
@@ -33,6 +34,7 @@
 	                <ul class="dropdown-menu">
 	                  	<li><a href="<? echo base_url();?>list-category/1">Destinations Category Manager</a></li>
 	                  	<li><a href="<? echo base_url();?>list-news/1">Destinations Manager</a></li>
+	                  	<li><a href="<? echo base_url();?>add-news/1">Add new Destination</a></li>
 	                </ul>
 	              	</li>
 	              	<li class="divider"></li>
@@ -41,6 +43,7 @@
 	                <ul class="dropdown-menu">
 	                  	<li><a href="<? echo base_url();?>list-category/2">Tours Category Manager</a></li>
 	                  	<li><a href="<? echo base_url();?>list-news/2">Tours Manager</a></li>
+	                  	<li><a href="<? echo base_url();?>add-news/3">Add new Tour</a></li>
 	                </ul>
 	              	</li>
 	              	<li class="divider"></li>
@@ -49,6 +52,7 @@
 	                <ul class="dropdown-menu">
 	                  	<li><a href="<? echo base_url();?>list-category/3">Blog Category Manager</a></li>
 	                  	<li><a href="<? echo base_url();?>list-news/3">Blog Manager</a></li>
+	                  	<li><a href="<? echo base_url();?>add-news/3">Add new Blog</a></li>
 	                </ul>
 	              	</li>
 	          	</ul>

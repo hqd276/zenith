@@ -3,27 +3,46 @@
 tinymce.init({
     selector: "#detail",
     height:"300",
-    style_formats: [
-        {title: 'Open Sans', inline: 'span', styles: { 'font-family':'Open Sans'}},
-        {title: 'Arial', inline: 'span', styles: { 'font-family':'arial'}},
-        {title: 'Book Antiqua', inline: 'span', styles: { 'font-family':'book antiqua'}},
-        {title: 'Comic Sans MS', inline: 'span', styles: { 'font-family':'comic sans ms,sans-serif'}},
-        {title: 'Courier New', inline: 'span', styles: { 'font-family':'courier new,courier'}},
-        {title: 'Georgia', inline: 'span', styles: { 'font-family':'georgia,palatino'}},
-        {title: 'Helvetica', inline: 'span', styles: { 'font-family':'helvetica'}},
-        {title: 'Impact', inline: 'span', styles: { 'font-family':'impact,chicago'}},
-        {title: 'Symbol', inline: 'span', styles: { 'font-family':'symbol'}},
-        {title: 'Tahoma', inline: 'span', styles: { 'font-family':'tahoma'}},
-        {title: 'Terminal', inline: 'span', styles: { 'font-family':'terminal,monaco'}},
-        {title: 'Times New Roman', inline: 'span', styles: { 'font-family':'times new roman,times'}},
-        {title: 'Verdana', inline: 'span', styles: { 'font-family':'Verdana'}}
-    ],
+    plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+         "save table contextmenu directionality emoticons template paste textcolor"
+   ],
+   toolbar: "insertfile undo redo | styleselect | fontselect | fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons", 
+   style_formats: [
+        {title: 'Bold text', inline: 'b'},
+        {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+        {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+        {title: 'Example 1', inline: 'span', classes: 'example1'},
+        {title: 'Example 2', inline: 'span', classes: 'example2'},
+        {title: 'Table styles'},
+        {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+    ]
+});
+tinymce.init({
+    selector: "#info",
+    height:"300",
+    plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+         "save table contextmenu directionality emoticons template paste textcolor"
+   ],
+   toolbar: "insertfile undo redo | styleselect | fontselect | fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons", 
+   style_formats: [
+        {title: 'Bold text', inline: 'b'},
+        {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+        {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+        {title: 'Example 1', inline: 'span', classes: 'example1'},
+        {title: 'Example 2', inline: 'span', classes: 'example2'},
+        {title: 'Table styles'},
+        {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+    ]
 });
 </script>
 
 <div class="contact-form col-sm-12 bg-white">
-	<h2 class="text-uppercase"><?php echo $title?></h2>
-	<a href="/list-news/<?php echo $type;?>" class="btn btn-default pull-right"> List News </a>
+	<h2 class="text-uppercase">Add new <?php echo $title?></h2>
+	<a href="/list-news/<?php echo $type;?>" class="btn btn-default pull-right"> List <?php echo $title?> </a>
 
 	<form class="form-horizontal col-md-12" role="form" method="post" enctype="multipart/form-data" action="">
 		<div class="form-group">
@@ -68,6 +87,12 @@ tinymce.init({
 				</select>
 			</div>
 		</div>
+		<!-- <div class="form-group col-sm-12">
+			<label for="inputEmail3" class="col-sm-2 control-label">Price</label>
+			<div class="col-sm-10">
+			  	<input type="" class="form-control" id="inputEmail3" name="price" placeholder="Price" value="<?php echo $item['price']; ?>">
+			</div>
+		</div> -->
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Description</label>
 			<div class="col-sm-10">
@@ -80,6 +105,14 @@ tinymce.init({
 				<textarea class="form-control" id="detail" name="detail" placeholder="Detail"><?php echo $item['detail']; ?></textarea>
 			</div>
 		</div>
+		<?php if(in_array($type, array(1,2))) {?>
+		<div class="form-group col-sm-12">
+			<label for="inputEmail3" class="col-sm-2 control-label">Information</label>
+			<div class="col-sm-10">
+				<textarea class="form-control" id="info" name="info" placeholder="Information"><?php echo $item['info']; ?></textarea>
+			</div>
+		</div>
+		<?php }?>
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Tag</label>
 			<div class="col-sm-10">
