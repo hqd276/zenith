@@ -22,7 +22,7 @@ class Setting extends MX_Controller{
 	public function index(){
 		$data = array();
 
-		$setting = $this->modelsetting->getSetting(null," LIMIT 0,10");
+		$setting = $this->modelsetting->getSetting(null);
 		if (count($setting)>0) {
 			foreach ($setting as $key => $value) {
 				# code...
@@ -50,7 +50,7 @@ class Setting extends MX_Controller{
 			$dataC['name'] = $item->name;
 			$dataC['image'] = $item->image;
 			$dataC['description'] = $item->description;
-			if ($dataC['key'] == 'about')
+			if (($dataC['key'] == 'about')||($dataC['key'] == 'contact'))
 				$dataC['detail'] = $item->detail;
 		}else{
 			$dataC['name'] = '';
@@ -69,10 +69,8 @@ class Setting extends MX_Controller{
 				$value = array();
 				$value['name'] = $this->input->post('name'); 
 				$value['description'] = $this->input->post('description'); 
-				if ($dataC['key'] == 'about')
-					$value['detail'] = $this->input->post('detail'); 
-				
-				$value['image'] = '';
+
+				$value['image'] = $dataC['image'];
 				if (!empty ($_FILES['image'])) {
 					$this->load->model(array('Mgallery'));
 					$image_data = $this->Mgallery->do_upload("/settings/");
@@ -82,11 +80,14 @@ class Setting extends MX_Controller{
 				}elseif(isset($dataC['image']) && ($dataC['image']!='')){
 					$value['image'] = $dataC['image'];
 				}
+
 				$dataC['name'] = $value['name'];
 				$dataC['image'] = $value['image'];
 				$dataC['description'] = $value['description'];
-				if ($dataC['key'] == 'about')
+				if (($dataC['key'] == 'about')||($dataC['key'] == 'contact')){
+					$value['detail'] = $this->input->post('detail'); 
 					$dataC['detail'] = $value['detail'];
+				}
 
 				if ($this->modelsetting->updateSetting($dataC['id'],array('value'=>json_encode($value)))){
 					$data['b_Check']= true;

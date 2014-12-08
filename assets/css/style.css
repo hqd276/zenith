@@ -19,7 +19,7 @@ body {
 .top .navbar-nav > li > a {
 	padding-top: 20px;
 	padding-bottom: 20px;
-}
+}	
 .top .navbar-brand {
 	padding: 20px;
 }
@@ -42,47 +42,6 @@ body {
 .middle{
 
 }
-.carousel {
-
-}
-
-.carousel-inner > .item > img {
-    top: 0;
-    left: 0;
-    min-width: 100%;
-}
-.carousel-inner > .item > .carousel-caption {
-	position: absolute;
-	left: 100px;
-	top : 200px;
-	text-align: left;
-	font-weight: 600;
-	color: #fff;
-	font-size: 50px;
-	line-height: 50px;
-}
-.carousel-control {
-	position: absolute;
-	left: 100px;
-	top : 300px;
-	width: 53px;
-	height: 53px;
-	opacity: 1;
-	z-index: 10;
-}
-.carousel-control.left {
-	background:url('../images/nav-slider.png') no-repeat 0px 0;
-}
-.carousel-control.left:hover {
-	background:url('../images/nav-slider.png') no-repeat 0px -54px;
-}
-.carousel-control.right {
-	background:url('../images/nav-slider.png') no-repeat -53px 0;
-	left: 155px;
-}
-.carousel-control.right:hover {
-	background:url('../images/nav-slider.png') no-repeat -53px -54px;
-}
 
 .hotnews {
 	margin: 30px -15px;
@@ -95,6 +54,9 @@ body {
 }
 .hotnews .thumbnail .caption {
 	color: #fff;
+}
+.hotnews .thumbnail .caption p {
+	height: 120px;
 }
 
 .hotnews h3 {

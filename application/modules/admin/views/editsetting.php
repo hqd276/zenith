@@ -3,21 +3,21 @@
 tinymce.init({
     selector: "#detail",
     height:"300",
-    style_formats: [
-        {title: 'Open Sans', inline: 'span', styles: { 'font-family':'Open Sans'}},
-        {title: 'Arial', inline: 'span', styles: { 'font-family':'arial'}},
-        {title: 'Book Antiqua', inline: 'span', styles: { 'font-family':'book antiqua'}},
-        {title: 'Comic Sans MS', inline: 'span', styles: { 'font-family':'comic sans ms,sans-serif'}},
-        {title: 'Courier New', inline: 'span', styles: { 'font-family':'courier new,courier'}},
-        {title: 'Georgia', inline: 'span', styles: { 'font-family':'georgia,palatino'}},
-        {title: 'Helvetica', inline: 'span', styles: { 'font-family':'helvetica'}},
-        {title: 'Impact', inline: 'span', styles: { 'font-family':'impact,chicago'}},
-        {title: 'Symbol', inline: 'span', styles: { 'font-family':'symbol'}},
-        {title: 'Tahoma', inline: 'span', styles: { 'font-family':'tahoma'}},
-        {title: 'Terminal', inline: 'span', styles: { 'font-family':'terminal,monaco'}},
-        {title: 'Times New Roman', inline: 'span', styles: { 'font-family':'times new roman,times'}},
-        {title: 'Verdana', inline: 'span', styles: { 'font-family':'Verdana'}}
-    ],
+    plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+         "save table contextmenu directionality emoticons template paste textcolor"
+   ],
+   toolbar: "insertfile undo redo | styleselect | fontselect | fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons", 
+   style_formats: [
+        {title: 'Bold text', inline: 'b'},
+        {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+        {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+        {title: 'Example 1', inline: 'span', classes: 'example1'},
+        {title: 'Example 2', inline: 'span', classes: 'example2'},
+        {title: 'Table styles'},
+        {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+    ]
 });
 </script>
 
@@ -69,7 +69,7 @@ tinymce.init({
 				<textarea class="form-control" name="description" placeholder="Description"><?php echo $item['description']; ?></textarea>
 			</div>
 		</div>
-		<?php if ($item['key']=='about') {?>
+		<?php if (($item['key']=='about')||($item['key']=='contact')) {?>
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Detail</label>
 			<div class="col-sm-10">

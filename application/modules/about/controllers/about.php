@@ -6,7 +6,7 @@ class About extends MX_Controller{
 		parent::__construct();
 		$data = Modules::run('header','home');
 		$this->template->set_partial('header','header',$data );
-		$this->template->set_partial('footer','footer');
+		$this->template->set_partial('footer','footer',$data);
 	}
 	
 	public function index(){

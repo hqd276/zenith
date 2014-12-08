@@ -18,7 +18,7 @@ class News extends MX_Controller {
 		$data = Modules::run('header','home');
 		$this->template->set_partial('header','header',$data);
 
-		$this->template->set_partial('footer','footer');
+		$this->template->set_partial('footer','footer',$data);
 	}
 	
 	public function index($type = 0,$cat = 0){
@@ -32,7 +32,7 @@ class News extends MX_Controller {
 				$data['page'] = "news";
 				break;
 			case 1:
-				$data['title'] = "Destinations";
+				$data['title'] = "Themes";
 				break;
 			case 2:
 				$data['title'] = "Tours";
@@ -65,10 +65,16 @@ class News extends MX_Controller {
 			redirect(base_url().'news/list');
 
 		$detail_news = $this->modelnews->getNewsById($id);
-		$category = $this->modelcategory->getCategoryById($detail_news['category_id']);
-		$other_news = $this->modelnews->getNews(array('category_id'=>$category['id']),' LIMIT 0,5');
+		if($detail_news['category_id']>0){
+			$category = $this->modelcategory->getCategoryById($detail_news['category_id']);
+			$other_news = $this->modelnews->getNews(array('category_id'=>$category['id']),' LIMIT 0,5');
+		}else{
+			$category = array("type"=>$detail_news['type'],"id" =>0,"name"=>"");
+			$other_news = $this->modelnews->getNews(array('type'=>$detail_news['type']),' LIMIT 0,5');
+		}
+		
 
-		$dataR = Modules::run('right',$category['type']);
+		$dataR = Modules::run('right',$detail_news['type']);
 		$this->template->set_partial('right','right',$dataR);
 
 		$data['other_news'] = $other_news;

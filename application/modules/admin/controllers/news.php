@@ -44,14 +44,14 @@ class News extends MX_Controller{
 				$data['title'] = 'News';
 				break;
 			case 1:
-				$data['title'] = 'Destination';
+				$data['title'] = 'Theme';
 				break;
 			case 2:
 				$data['title'] = 'Tour';
 				break;
-			case 3:
-				$data['title'] = 'Blog';
-				break;
+			// case 3:
+			// 	$data['title'] = 'Blog';
+			// 	break;
 			
 			default:
 				$data['title'] = 'News';

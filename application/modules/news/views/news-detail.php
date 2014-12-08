@@ -19,7 +19,7 @@
 	       	</div>
 		<hr>
 		<span class="glyphicon glyphicon-tags"></span> <?php echo $item['tag']?> 
-		<span class="glyphicon glyphicon-pencil"></span><?php echo date("d/m/Y",$item['created'])?> 
+		<!-- <span class="glyphicon glyphicon-pencil"></span><?php echo date("d/m/Y",$item['created'])?> --> 
 		<hr>
 		<ul>
 		<?php if (count($other_news)>0) {
