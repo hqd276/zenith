@@ -12,8 +12,8 @@
 	<div class="carousel-inner" role="listbox">
 		<?php foreach ($list_news as $key => $value) {?>
 			<div class="item <?php if($key==key($list_news)) echo "active"; ?>">
-				<img src="<?php echo base_url().'uploads/news/'.$value['image']?>" alt="...">
-			  	<div class="carousel-caption">
+				<img class="img-responsive" src="<?php echo base_url().'uploads/news/'.$value['image']?>" alt="...">
+			  	<div class="carousel-caption  hidden-xs">
 				    <a href="<?php echo base_url().'news/detail/'.$value['id']?>"><?php echo $value['title']?></a>
 			  	</div>
 			</div>
@@ -22,10 +22,10 @@
 	</div>
 
 	<!-- Controls -->
-	<a class="left carousel-control" href="#carousel-large" role="button" data-slide="prev">
+	<a class="left carousel-control hidden-xs" href="#carousel-large" role="button" data-slide="prev">
 		<span class="sr-only">Previous</span>
 	</a>
-	<a class="right carousel-control" href="#carousel-large" role="button" data-slide="next">
+	<a class="right carousel-control hidden-xs" href="#carousel-large" role="button" data-slide="next">
 		<span class="sr-only">Next</span>
 	</a>
 </div>

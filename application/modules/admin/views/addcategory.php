@@ -1,6 +1,6 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase"><?php echo $title?></h2>
-	<a href="/list-category/<?php echo $type;?>" class="btn btn-default pull-right"> List Category </a>
+	<a href="<?php echo base_url('/admin/category/index/'.$type)?>" class="btn btn-default pull-right"> List Category </a>
 
 	<form class="form-horizontal col-md-12" role="form" method="post" enctype="multipart/form-data" action="">
 		<div class="form-group">

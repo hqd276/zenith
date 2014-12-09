@@ -144,6 +144,10 @@ class Category extends MX_Controller{
 
 		$this->template->build('addcategory',$data);
 	}
+	public function delete($type=0,$id=0){
+		$this->db->delete('categories', array('id' => $id)); 
+		redirect(base_url('/admin/category/index/'.$type));
+	}
 
 	function category_box ($category, $dataC) {
 		$category_box = "";

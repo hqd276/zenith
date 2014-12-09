@@ -1,6 +1,6 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">List Image</h2>
-	<a href="/add-gallery" class="btn btn-default pull-right"> Add new Image </a>
+	<a href="<?php echo base_url('/admin/gallery/add')?>" class="btn btn-default pull-right"> Add new Image </a>
 	
 	<table class="table table-bordered table-hover">
 		<thead>
@@ -23,7 +23,7 @@
 				?></td>
 				<td><?php echo $item["status"]?></td>
 				<td>
-					<a href="#" class="btn btn-default"> Delete </a>
+					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/gallery/delete/'.$item["id"])?>')" class="btn btn-default"> Delete </a>
 				</td>
 			</tr>
 			<?php }?>

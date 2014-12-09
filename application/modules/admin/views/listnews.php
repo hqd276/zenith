@@ -1,6 +1,6 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">List News</h2>
-	<a href="/add-news/<?php echo $type;?>" class="btn btn-default pull-right"> Add new News </a>
+	<a href="<?php echo base_url('/admin/news/add/'.$type)?>" class="btn btn-default pull-right"> Add new News </a>
 	
 	<table class="table table-bordered table-hover">
 		<thead>
@@ -19,8 +19,8 @@
 				<td><?php echo $item["category_id"]?></td>
 				<td><?php echo $item["status"]?></td>
 				<td>
-					<a href="#" class="btn btn-default"> Delete </a>
-					<a href="<?php echo base_url("edit-news/".$type."/".$item["id"]);?>" class="btn btn-default"> Edit </a>
+					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/news/delete/'.$type.'/'.$item["id"])?>')"  class="btn btn-default"> Delete </a>
+					<a href="<?php echo base_url("/admin/news/edit/".$type."/".$item["id"]);?>" class="btn btn-default"> Edit </a>
 				</td>
 			</tr>
 			<?php }?>

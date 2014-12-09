@@ -3,17 +3,13 @@
 }
 .news-form .item {
 	padding: 20px 0;
-	position: relative;
+	display: block;
+  overflow: hidden;
 }
 .news-form .item a{
 	text-decoration: none;
 }
 .news-form .item img {
-	float: left;
-	width: 270px;
-	min-height: 180px;
-	margin-right: 20px;
-  margin-bottom: 0;
 }
 .news-form .item span {
 	color: #d9bb4b;
@@ -30,9 +26,6 @@
 }
 
 .news-form .item .more {
-	position: absolute;
-	bottom: 20px;
-	right: 30px;
 	padding: 10px 20px;
 	color: #fff;
 	background-image: linear-gradient(to bottom,#30373f,#272d33);
@@ -43,8 +36,9 @@
 .news-detail .col-md-12 {
 	margin: 20px 0;
 }
-.news-detail .description {
-
+.news-detail .tab-content img {
+  max-width: 100%;
+  height: auto;
 }
 
 .news-detail .glyphicon {

@@ -140,7 +140,7 @@ class News extends MX_Controller{
 		$user = $this->session->userdata('user'); 
 		$data = array();
 		if ($id<=0)
-			redirect(base_url('list-news/'.$type));
+			redirect(base_url('admin/news/index/'.$type));
 
 		$data['type'] = $type;
 		$data['title'] = "Edit news";
@@ -208,6 +208,10 @@ class News extends MX_Controller{
 		$data['item'] = $dataC;
 
 		$this->template->build('addnews',$data);
+	}
+	public function delete($type=0,$id=0){
+		$this->db->delete('news', array('id' => $id)); 
+		redirect(base_url('/admin/news/index/'.$type));
 	}
 
 	function category_box ($category, $dataC) {

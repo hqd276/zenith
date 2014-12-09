@@ -72,4 +72,9 @@ class Gallery extends MX_Controller{
 		$data['item'] = $dataC;
 		$this->template->build('addgallery',$data);
 	}
+
+	public function delete($id=0){
+		$this->db->delete('gallery', array('id' => $id)); 
+		redirect(base_url('/admin/gallery'));
+	}
 }

@@ -1,6 +1,6 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">List category</h2>
-	<a href="/add-category/<?php echo $type;?>" class="btn btn-default pull-right"> Add new Category </a>
+	<a href="<?php echo base_url('/admin/category/add/'.$type)?>" class="btn btn-default pull-right"> Add new Category </a>
 	
 	<table class="table table-bordered table-hover">
 		<thead>
@@ -19,8 +19,8 @@
 				<td><?php echo $item["parent"]?></td>
 				<td><?php echo $item["status"]?></td>
 				<td>
-					<a href="#" class="btn btn-default"> Delete </a>
-					<a href="<?php echo base_url("edit-category/".$type."/".$item["id"]);?>" class="btn btn-default"> Edit </a>
+					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/category/delete/'.$type.'/'.$item["id"])?>')"  class="btn btn-default"> Delete </a>
+					<a href="<?php echo base_url("/admin/category/edit/".$type."/".$item["id"]);?>" class="btn btn-default"> Edit </a>
 				</td>
 			</tr>
 			<?php }?>

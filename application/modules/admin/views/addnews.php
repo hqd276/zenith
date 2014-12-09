@@ -42,7 +42,7 @@ tinymce.init({
 
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">Add new <?php echo $title?></h2>
-	<a href="/list-news/<?php echo $type;?>" class="btn btn-default pull-right"> List <?php echo $title?> </a>
+	<a href="<?php echo base_url('/admin/news/index/'.$type)?>" class="btn btn-default pull-right"> List <?php echo $title?> </a>
 
 	<form class="form-horizontal col-md-12" role="form" method="post" enctype="multipart/form-data" action="">
 		<div class="form-group">

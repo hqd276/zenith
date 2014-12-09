@@ -1,6 +1,6 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">Add new Image</h2>
-	<a href="/list-gallery" class="btn btn-default pull-right"> Gallery </a>
+	<a href="<?php echo base_url('/admin/gallery')?>" class="btn btn-default pull-right"> Gallery </a>
 
 	<form class="form-horizontal col-md-12" role="form" method="post" enctype="multipart/form-data" action="">
 		<div class="form-group">
