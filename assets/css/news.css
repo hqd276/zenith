@@ -13,6 +13,7 @@
 	width: 270px;
 	min-height: 180px;
 	margin-right: 20px;
+  margin-bottom: 0;
 }
 .news-form .item span {
 	color: #d9bb4b;
@@ -30,7 +31,7 @@
 
 .news-form .item .more {
 	position: absolute;
-	bottom: 0;
+	bottom: 20px;
 	right: 30px;
 	padding: 10px 20px;
 	color: #fff;

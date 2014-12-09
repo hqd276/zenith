@@ -43,16 +43,6 @@
 		      	</ul>
 		      	<?php }?>
 		    </li>
-		    <li class="dropdown <?php echo ($page=="blog")?'active':'';?>">
-		    	<a href="<?php echo base_url().'news/list/3';?>" class="dropdown-toggle">Blog</a>
-		    	<?php if (count($cat_blog)>0){?>
-		    	<ul class="dropdown-menu" role="menu">
-		      		<?php	foreach ($cat_blog as $key => $value) {
-		      				echo "<li><a href='".base_url()."news/list/3/".$value['id']."'>".$value['name']."</a></li>";
-	      			}?>
-		      	</ul>
-		      	<?php }?>
-		    </li>
 		    <li <? if ($page=="contact") {?> class="active"<? }?>>
 		    	<a href="<? echo base_url();?>contact">Contact</a>
 		    </li>

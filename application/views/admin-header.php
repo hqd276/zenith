@@ -30,11 +30,11 @@
 	              	</li>
 	              	<li class="divider"></li>
 	              	<li class="dropdown-submenu">
-	                <a tabindex="-1" href="#">Destinations</a>
+	                <a tabindex="-1" href="#">Themes</a>
 	                <ul class="dropdown-menu">
-	                  	<li><a href="<? echo base_url();?>list-category/1">Destinations Category Manager</a></li>
-	                  	<li><a href="<? echo base_url();?>list-news/1">Destinations Manager</a></li>
-	                  	<li><a href="<? echo base_url();?>add-news/1">Add new Destination</a></li>
+	                  	<li><a href="<? echo base_url();?>list-category/1">Themes Category Manager</a></li>
+	                  	<li><a href="<? echo base_url();?>list-news/1">Themes Manager</a></li>
+	                  	<li><a href="<? echo base_url();?>add-news/1">Add new Theme</a></li>
 	                </ul>
 	              	</li>
 	              	<li class="divider"></li>
@@ -46,7 +46,7 @@
 	                  	<li><a href="<? echo base_url();?>add-news/3">Add new Tour</a></li>
 	                </ul>
 	              	</li>
-	              	<li class="divider"></li>
+	              	<!-- <li class="divider"></li>
 	              	<li class="dropdown-submenu">
 	                <a tabindex="-1" href="#">Blog</a>
 	                <ul class="dropdown-menu">
@@ -54,7 +54,7 @@
 	                  	<li><a href="<? echo base_url();?>list-news/3">Blog Manager</a></li>
 	                  	<li><a href="<? echo base_url();?>add-news/3">Add new Blog</a></li>
 	                </ul>
-	              	</li>
+	              	</li> -->
 	          	</ul>
 	        </li>
 	        <li>

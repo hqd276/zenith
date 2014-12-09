@@ -1,0 +1,44 @@
+.carousel {
+
+}
+.carousel-inner > .item {
+	height: 500px;
+	overflow: hidden;
+}
+.carousel-inner > .item > img {
+    top: 0;
+    left: 0;
+    min-width: 100%;
+}
+.carousel-inner > .item > .carousel-caption {
+	position: absolute;
+	left: 10%;
+	top : 30%;
+	text-align: left;
+	font-weight: 600;
+	color: #fff;
+	font-size: 45px;
+	line-height: 50px;
+}
+.carousel-control {
+	position: absolute;
+	left: 10%;
+	top : 50%;
+	width: 53px;
+	height: 53px;
+	opacity: 1;
+	z-index: 10;
+}
+.carousel-control.left {
+	background:url('../images/nav-slider.png') no-repeat 0px 0;
+}
+.carousel-control.left:hover {
+	background:url('../images/nav-slider.png') no-repeat 0px -54px;
+}
+.carousel-control.right {
+	background:url('../images/nav-slider.png') no-repeat -53px 0;
+	left: 15%;
+}
+.carousel-control.right:hover {
+	background:url('../images/nav-slider.png') no-repeat -53px -54px;
+}
