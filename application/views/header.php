@@ -1,4 +1,4 @@
-<a class="logo" href="/"> </a>
+<a class="logo" href="/"> <img src="<? echo base_url()."uploads/settings/".$setting['logo']['data']->image;?>"> </a>
 
 <nav class="navbar navbar-default " role="navigation">
 
@@ -33,15 +33,28 @@
 		      	</ul>
 		      	<?php }?>
 		    </li>
-		    <li class="dropdown <?php echo ($page=="tour")?'active':'';?>">
-		    	<a href="<?php echo base_url().'news/list/2';?>" class="dropdown-toggle">Tours</a>
-		    	<?php if (count($cat_tour)>0){?>
+		    <li class="dropdown <?php echo ($page=="destination")?'active':'';?>">
+		      	<a href="<?php echo base_url().'destination/list/1';?>" class="dropdown-toggle">Destinations</span></a>
+		      	<?php if (count($cat_destination)>0){?>
 		    	<ul class="dropdown-menu" role="menu">
-		      		<?php	foreach ($cat_tour as $key => $value) {
-		      				echo "<li><a href='".base_url()."news/list/2/".$value['id']."'>".$value['name']."</a></li>";
+		      		<?php	foreach ($cat_destination as $key => $value) {
+		      				echo "<li><a href='".base_url()."destination/list/1/".$value['id']."'>".$value['name']."</a></li>";
 	      			}?>
 		      	</ul>
 		      	<?php }?>
+		    </li>
+		    <li class="dropdown <?php echo ($page=="tour")?'active':'';?>">
+		    	<a href="<?php echo base_url().'tour/list/2';?>" class="dropdown-toggle">Tours</a>
+		    	<?php if (count($cat_tour)>0){?>
+		    	<ul class="dropdown-menu" role="menu">
+		      		<?php	foreach ($cat_tour as $key => $value) {
+		      				echo "<li><a href='".base_url()."tour/list/2/".$value['id']."'>".$value['name']."</a></li>";
+	      			}?>
+		      	</ul>
+		      	<?php }?>
+		    </li>
+		    <li <? if ($page=="booking") {?> class="active"<? }?>>
+		    	<a href="<? echo base_url();?>booking">Booking</a>
 		    </li>
 		    <li <? if ($page=="contact") {?> class="active"<? }?>>
 		    	<a href="<? echo base_url();?>contact">Contact</a>

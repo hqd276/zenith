@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="<? echo base_url();?>assets/css/style.css">
 </head>
 
-<body>
+<body style="background: url('<? echo base_url()."uploads/settings/".$setting['background']['data']->image;?>') no-repeat;background-size: 100% auto;">
 <div class="container">
 	<div class="top">
 		<?php echo $template['partials']['header']; ?>

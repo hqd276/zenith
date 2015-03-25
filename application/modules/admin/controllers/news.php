@@ -18,16 +18,31 @@ class News extends MX_Controller{
 		$this->template->set_layout('admin');
 	}
 	
-	public function index($type=0){
+	public function index($type=0, $page=1){
 		$data = array();
 		$data['type'] = $type;
 
-		$news = $this->modelnews->getNews(array("type"=>$type)," LIMIT 0,10");
-		if (count($news)>0) {
-			foreach ($news as $key => $value) {
-				# code...
-			}
+		$item_per_page = 10;
+		$begin = 0;
+		if ($page>1) {
+			$begin = ($page-1) * $item_per_page - 1;
 		}
+
+		$news = $this->modelnews->getNews(array("type"=>$type)," LIMIT ".$begin.",".($item_per_page+1));
+		// if (count($news)>0) {
+		// 	foreach ($news as $key => $value) {
+		// 		# code...
+		// 	}
+		// }
+
+		if (count($news)>$item_per_page){
+			$data['next'] = $page + 1;
+			array_pop($news);
+		}else 
+			$data['next'] = 0;
+
+		$data['prev'] = $page - 1;
+		
 		$data['list'] = $news;
 		// var_dump($data['list']);die;
 
@@ -157,7 +172,7 @@ class News extends MX_Controller{
 			$this->load->library(array('form_validation'));
 
 			$this->form_validation->set_rules('title', 'Title', 'required|min_length[5]'); 
-			$this->form_validation->set_rules('detail', 'Detail', 'required|min_length[5]'); 
+			// $this->form_validation->set_rules('detail', 'Detail', 'required|min_length[5]'); 
 
 			#Kiểm tra điều kiện validate 
 			if($this->form_validation->run() == TRUE){ 

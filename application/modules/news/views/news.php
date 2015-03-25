@@ -2,10 +2,10 @@
 <div class=" bg-white">
 	<h2 class="text-uppercase"><?php echo $title?></h2>
 	<hr>
-	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'news/list/'.$cat['type'].'/'. $cat['id']?>"><?php echo $cat['name']?></a>
+	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().$page.'/list/'.$cat['type'].'/'. $cat['id']?>"><?php echo $cat['name']?></a>
 	<hr>
 
-	<div class="news-form col-md-8">
+	<div class="news-form col-md-8 row">
 		<?php foreach ($list_news as $key => $value) {?>
 			<div class="item">
 				<div class="col-md-4">
@@ -20,6 +20,12 @@
 			</div>
 		<?php }
 		?>
+		<nav>
+		  	<ul class="pager">
+			    <li class="previous <?php if ($prev <1) echo 'disabled';?>"><a href="<?php if ($prev >=1) echo  base_url().$page.'/list/'.$cat['type'].'/'. $cat['id'].'/'. $prev ?>"><span aria-hidden="true">&larr;</span> Older</a></li>
+			    <li class="next <?php if ($next == 0) echo 'disabled';?>"><a href="<?php if ($next <> 0) echo base_url().$page.'/list/'.$cat['type'].'/'. $cat['id'].'/'. $next ?>">Newer <span aria-hidden="true">&rarr;</span></a></li>
+		  	</ul>
+		</nav>
 	</div>
 	<div class="col-md-4">
 		<?php echo $template['partials']['right']; ?>

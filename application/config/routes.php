@@ -54,18 +54,31 @@ $route['contact'] = "contact";
 $route['news'] = "news";
 $route['news/list/(:num)'] = "news/index/$1";
 $route['news/list/(:num)/(:num)'] = "news/index/$1/$2";
+$route['news/list/(:num)/(:num)/(:num)'] = "news/index/$1/$2/$3";
+
+$route['tour/list/2'] = "news/index/2";
+$route['tour/list/2/(:num)'] = "news/index/2/$1";
+$route['tour/list/2/(:num)/(:num)'] = "news/index/2/$1/$2";
+
+$route['destination/list/1'] = "news/index/1";
+$route['destination/list/1/(:num)'] = "news/index/1/$1";
+$route['destination/list/1/(:num)/(:num)'] = "news/index/1/$1/$2";
 
 $route['admin'] = "admin";
+$route['admin/gallery/(:num)'] = "admin/gallery/index/$1";
+$route['admin/booking/(:num)'] = "admin/booking/index/$1";
+$route['admin/support/(:num)'] = "admin/support/index/$1";
 // $route['list-support'] = "admin/support";
 // $route['list-booking'] = "admin/booking";
 
-$route['list-category/(:num)'] = "admin/category/index/$1";
-$route['add-category/(:num)'] = "admin/category/add/$1";
-$route['edit-category/(:num)/(:num)'] = "admin/category/edit/$1/$2";
+// $route['list-category/(:num)'] = "admin/category/index/$1";
+// $route['add-category/(:num)'] = "admin/category/add/$1";
+// $route['edit-category/(:num)/(:num)'] = "admin/category/edit/$1/$2";
 
-$route['list-news/(:num)'] = "admin/news/index/$1";
-$route['add-news/(:num)'] = "admin/news/add/$1";
-$route['edit-news/(:num)/(:num)'] = "admin/news/edit/$1/$2";
+$route['admin/news/(:num)'] = "admin/news/index/$1";
+$route['admin/news/(:num)/(:num)'] = "admin/news/index/$1/$2";
+// $route['add-news/(:num)'] = "admin/news/add/$1";
+// $route['edit-news/(:num)/(:num)'] = "admin/news/edit/$1/$2";
 
 // $route['list-gallery'] = "admin/gallery/index";
 // $route['add-gallery'] = "admin/gallery/add";

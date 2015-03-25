@@ -34,5 +34,11 @@
 		<?php }?>
 		</tbody>
 	</table>
+	<nav>
+	  	<ul class="pager">
+		    <li class="previous <?php if ($prev <1) echo 'disabled';?>"><a href="<?php if ($prev >=1) echo  base_url().'admin/gallery/'. $prev ?>"><span aria-hidden="true">&larr;</span> Older</a></li>
+		    <li class="next <?php if ($next == 0) echo 'disabled';?>"><a href="<?php if ($next <> 0) echo base_url().'admin/gallery/'. $next ?>">Newer <span aria-hidden="true">&rarr;</span></a></li>
+	  	</ul>
+	</nav>
 </div>
 		

@@ -20,10 +20,26 @@ class Support extends MX_Controller{
 		$this->template->set_layout('admin');
 	}
 	
-	public function index(){
+	public function index($page = 1){
 		$data = array();
-		$data['list'] = $this->modelsupport->getSupports(0,10);
-		// var_dump($data['list']);die;
+
+		$item_per_page = 10;
+		$begin = 0;
+		if ($page>1) {
+			$begin = ($page-1) * $item_per_page - 1;
+		}
+		
+		$listsupport = $this->modelsupport->getSupports($begin,$item_per_page+1);
+		
+		if (count($listsupport)>$item_per_page){
+			$data['next'] = $page + 1;
+			array_pop($listsupport);
+		}else 
+			$data['next'] = 0;
+
+		$data['prev'] = $page - 1;
+
+		$data['list'] = $listsupport;
 
 		$this->template->build('listsupport',$data);
 	}

@@ -1,6 +1,13 @@
-<div class="footer">
+<div class="footer container ">
 	<div class="col-md-6">
-		<a class="logo" href="/"> </a>
+		<a class="logo-footer" href="/"> <img src="<? echo base_url()."uploads/settings/".$setting['logo']['data']->image;?>"></a>
+		<p style="padding-top:20px">
+			ZenithVietnamTours : One Member Company Limited <br>
+			License No: 0104 007688 – 01/09/2012 <br>
+			Registered office: Suites 616. 6 F 72 Tran Hung Dao, Hanoi, VIETNAM. <br>
+			General enquiries and Online bookings: +84 903479915<br>
+			© 2012-15 Zenithvietnamtors  ALL RIGHTS RESERVED
+		</p>
 	</div>
 	<div class="col-md-3">
 		<h4 class="text-uppercase">About us</h4>

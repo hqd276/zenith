@@ -63,12 +63,14 @@ tinymce.init({
 			  	<input type="file" class="form-control" id="inputEmail3" name="image" placeholder="Image">
 			</div>
 		</div>
+		<?php if (($item['key']<>'logo')&&($item['key']<>'background')) {?>
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Description</label>
 			<div class="col-sm-10">
 				<textarea class="form-control" name="description" placeholder="Description"><?php echo $item['description']; ?></textarea>
 			</div>
 		</div>
+		<?php }?>
 		<?php if (($item['key']=='about')||($item['key']=='contact')) {?>
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Detail</label>

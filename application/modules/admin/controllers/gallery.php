@@ -18,15 +18,30 @@ class Gallery extends MX_Controller{
 		$this->template->set_layout('admin');
 	}
 	
-	public function index(){
+	public function index($page = 1){
 		$data = array();
 
-		$gallery = $this->modelgallery->getGallery(null," LIMIT 0,10");
+		$item_per_page = 1;
+		$begin = 0;
+		if ($page>1) {
+			$begin = ($page-1) * $item_per_page ;
+		}
+
+		$gallery = $this->modelgallery->getGallery(null," LIMIT ".$begin.",".($item_per_page+1));
 		// if (count($gallery)>0) {
 		// 	foreach ($gallery as $key => $value) {
 		// 		# code...
 		// 	}
 		// }
+
+		if (count($gallery)>$item_per_page){
+			$data['next'] = $page + 1;
+			array_pop($gallery);
+		}else 
+			$data['next'] = 0;
+		
+		$data['prev'] = $page - 1;
+
 		$data['list'] = $gallery;
 
 		$this->template->build('listgallery',$data);

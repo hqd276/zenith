@@ -19,11 +19,14 @@ class Booking extends MX_Controller {
 	public function index(){
 		$data = array();
 		// $data['page'] = 'contact';
+		$data['tour'] = '';
 
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|valid_email'); 
 		$this->form_validation->set_rules('phone', 'Phone', 'required|min_length[10]|xss_clean'); 
 		$this->form_validation->set_rules('content', 'Content', 'required|min_length[5]|xss_clean'); 
 		$this->form_validation->set_rules('from',  'From','trim|xss_clean');
+		$this->form_validation->set_rules('tour',  'Tour','trim|xss_clean');
+		$this->form_validation->set_rules('tour_id',  'Tour Id','trim|xss_clean');
 		$this->form_validation->set_rules('departure',  'Departure','trim|xss_clean');
 		$this->form_validation->set_rules('destination',  'Destination','trim|xss_clean');
 		$this->form_validation->set_rules('adult',  'Adult','trim|xss_clean');
@@ -33,6 +36,8 @@ class Booking extends MX_Controller {
 		if($this->form_validation->run() == TRUE){ 
 			$data['from'] = $this->input->post('from'); 
 			$data['to'] = $this->input->post('to'); 
+			$data['tour'] = $this->input->post('tour'); 
+			$data['tour_id'] = $this->input->post('tour_id'); 
 			$data['departure'] = $this->input->post('departure'); 
 			$data['destination'] = $this->input->post('destination'); 
 			$data['adult'] = $this->input->post('adult'); 

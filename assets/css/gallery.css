@@ -1,6 +1,12 @@
-.thumbnail  {
+.gallery a {
+	height: 150px;
+	max-width: 100%;
+	display: block;
 	overflow: hidden;
+	margin-bottom: 15px;
 }
-.thumbnail img  {
-	height:150px; 
+.gallery a img  {
+	width: 100%;
+	border: 1px solid #ccc;
+	min-height: 100%;
 }

@@ -96,13 +96,13 @@
 	</div>
 	<div class="supports col-md-3 col-sm-6">
 		<div>
-			<h4 class="text-uppercase"><?php echo $setting['support']['data']->description;?></h4>
+			<h4 class="text-uppercase"><?php echo $setting['support']['data']->name;?></h4>
 			<p><?php echo $setting['support']['data']->description;?></p>
 			<div class="clearfix"></div>
 			<a href="<? echo base_url();?>contact" class="text-uppercase more">More</a>
 		</div>
 		<div>
-			<h4 class="text-uppercase"><?php echo $setting['gallery']['data']->description;?></h4>
+			<h4 class="text-uppercase"><?php echo $setting['gallery']['data']->name;?></h4>
 			<p><?php echo $setting['gallery']['data']->description;?></p>
 			<div class="clearfix"></div>
 			<a href="<? echo base_url();?>gallery" class="text-uppercase more">More</a>

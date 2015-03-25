@@ -1,5 +1,5 @@
 body {
-	background: url('../images/travel_header.jpg') top left no-repeat;
+	/*background: url('../images/background.png') top left no-repeat;*/
 	background-size: 100% auto;
 	width: 100%;
 }
@@ -32,12 +32,17 @@ body {
 }
 
 .logo {
-	background: url('../images/logo.png');
-	width: 350px;
-	height: 60px;
+	/*background: url('../images/logo.png');*/
+	/*width: 350px;*/
+	height: 120px;
 	display: block;
 	margin: 40px 0;
 }
+.logo img{
+	max-height: 100%;
+	max-width: 100%;
+}
+
 
 .middle{
 
@@ -163,15 +168,21 @@ body {
 	text-decoration: none;
 }
 .bottom .footer{
-	max-width: 1000px;
+	/*max-width: 1000px;*/
 	margin: 10px auto;
 	overflow: hidden;
+	min-height: 0;
 }
-.bottom .logo{
-	background: url('../images/logo-footer.png');
-	width: 210px;
-	height: 37px;
+.bottom .logo-footer{
+	/*background: url('../images/logo-footer.png');*/
+	width: 50%;
+	background-color: #ccc;
+	border: 1px solid #999;
 	display: block;
+	padding: 5px;
+}
+.bottom .logo-footer img{
+	width: 100%;
 }
 .bottom h4 {
 	color: #fff;

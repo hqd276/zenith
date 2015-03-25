@@ -77,6 +77,14 @@
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
+			<?php 
+			if ($tour != "") {?>
+			<label for="inputEmail3" class="col-sm-2 control-label">Tour</label>
+			<div class="col-sm-10">
+			  	<input type="text" class="form-control" id="" name="tour" placeholder="Tour" value="<?php echo set_value('tour'); ?>">
+				<input type="hidden" class="form-control" id="" name="tour_id" value="<?php echo set_value('tour_id'); ?>">
+			</div>
+			<?php }else{?>
 			<label for="inputEmail3" class="col-sm-2 control-label">Departure</label>
 			<div class="col-sm-4">
 			  	<input type="text" class="form-control" id="" name="departure" placeholder="Departure" value="<?php echo set_value('departure'); ?>">
@@ -85,6 +93,7 @@
 			<div class="col-sm-4">
 			  	<input type="text" class="form-control" id="" name="destination" placeholder="Destination" value="<?php echo set_value('destination'); ?>">
 			</div>
+			<?php }?>
 		</div>
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Guests</label>
